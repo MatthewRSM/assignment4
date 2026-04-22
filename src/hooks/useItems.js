@@ -88,7 +88,7 @@ export default function useItems(){
     
     const filtered = items.filter(item => {
       if (search && !item.name.toLowerCase().includes(search.toLowerCase()) && !item.id.includes(search)) return false
-      if (category && item.category !== category) return false
+      if (category && item.category !== category && item.category2 !== category) return false
       if (minValue && item.height < Number(minValue)) return false
       if (maxValue && item.height > Number(maxValue)) return false
       return true
