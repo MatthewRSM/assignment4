@@ -5,7 +5,9 @@ import HomeView from './views/HomeView'
 import ListView from './views/ListView'
 import DetailView from './views/DetailView'
 import CreateEditView from './views/CreateEditView'
+import NotFoundView from './views/NotFoundView'
 import { ItemsProvider } from './context/ItemsContext'
+
 
 export default function App(){
   return (
@@ -17,7 +19,7 @@ export default function App(){
           <Route path="item/:id" element={<DetailView />} />
           <Route path="new" element={<CreateEditView />} />
           <Route path="edit/:id" element={<CreateEditView />} />
-          <Route path="*" element={<div className="alert alert-warning">Not Found</div>} />
+          <Route path="*" element={<NotFoundView />} />
         </Route>
       </Routes>
     </ItemsProvider>
